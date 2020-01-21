@@ -10,8 +10,15 @@ namespace EFGetStarted
 
         public DbSet<Post> Posts { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options) =>
-            options.UseSqlite("Data Source=blogging.db");
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Blog>().Property(b => b.Url).IsRequired();
+        }
+
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Channels;
+using Microsoft.Extensions.Logging;
 
 namespace EFGetStarted
 {
@@ -33,6 +34,7 @@ namespace EFGetStarted
                 db.SaveChanges();
 
             }
+
 
         }
     }

@@ -1,4 +1,6 @@
-﻿namespace EFGetStarted
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace EFGetStarted
 {
     public class Post
     {
